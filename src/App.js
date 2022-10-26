@@ -1,23 +1,41 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import Modal from './Modal';
 import './App.css';
 
+function PopUp(props) {
+  return (
+    <div className="popUp">
+      <h1>
+        Popup
+      </h1>
+
+      <button onClick={() => { props.setShow(false) }}>
+        Close
+      </button>
+    </div>
+  )
+}
+
 function App() {
+  const [show, setShow] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        show
+          ?
+          <Modal>
+            <PopUp setShow={setShow} />
+          </Modal>
+          :
+          null
+      }
+
+      <div>
+        <button onClick={() => setShow(true)}>
+          Click me!
+        </button>
+      </div>
     </div>
   );
 }
