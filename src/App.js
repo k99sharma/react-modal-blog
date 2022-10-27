@@ -6,7 +6,7 @@ function PopUp(props) {
   return (
     <div className="popUp">
       <h1>
-        Popup
+        This is a modal!
       </h1>
 
       <button onClick={() => { props.setShow(false) }}>

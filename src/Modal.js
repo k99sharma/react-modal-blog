@@ -16,11 +16,15 @@ const Modal = ({ children }) => {
     useEffect(() => {
         // it is the div we created in index.js
         const modalRoot = document.getElementById("modal");
+        document.body.style.overflow = 'hidden';    // disabling overflow functioning
 
         modalRoot.appendChild(elRef.current);
 
         // to destroy this modal after use
-        return () => modalRoot.removeChild(elRef.current);
+        return () => {
+            document.body.style.overflow = 'unset'  // enabling overflow functioning
+            modalRoot.removeChild(elRef.current)
+        };
     }, [])
 
     return createPortal(<div>{children}</div>, elRef.current);
