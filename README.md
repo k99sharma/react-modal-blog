@@ -14,25 +14,25 @@ Modals are large UI elements that sit on top of an application's main window—o
 - Clone the repo to your local environment
     
   ```code
-      git clone https://github.com/<your username>/react-modal-blog.git
+  git clone https://github.com/<your username>/react-modal-blog.git
   ```
   
 - Open terminal or powershell inside this cloned repo
   
   ```code
-      cd react-modal-blog/
+  cd react-modal-blog/
   ```
 
 - Install dependencies
 
   ```code
-    npm install
+  npm install
   ```
   
 - Run the project
 
   ```code
-    npm run start
+  npm run start
   ```
   
 ## Find this repository useful? ❤
